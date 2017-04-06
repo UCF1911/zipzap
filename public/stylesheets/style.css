@@ -1,0 +1,156 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul{
+  margin: 70px 0 30px 0;
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 400px;
+}
+
+.text{
+  margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+.wrapper{
+  min-width : 500px;
+  position:relative;
+}
+
+input[type="file"] {
+  display: none;
+}
+.upload {
+  position:absolute;
+  right:20px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-left: 0;
+  height:20px;
+  border-radius: 20%;
+  transition: all .2s;
+  background-color : #00fff7;
+
+}
+
+
+.left{
+  position:absolute;
+  left:-10px;
+  height:20px;
+  border: 1px solid #ccc;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 6px 12px;
+  width:10px;
+  border-top-left-radius: 30%;
+  border-bottom-left-radius: 30%;
+  border-right: 0;
+}
+
+
+.upload:hover {
+  background-color: #a3fffa;
+  cursor: pointer;
+
+}
+
+.text {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-right: 0;
+  border-left:0;
+  padding: 6px 30px;
+  margin-right:0;
+  width:400px;
+  height:20px;
+
+}
+
+
+.btn{
+  margin-top: 50px;
+}
+
+
+.btn{
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-left: 0;
+  height:30px;
+  width:80px;
+  border-radius: 15%;
+  transition: all .2s;
+  background-color : #00fff7;
+  font-size: 15px;
+  padding-bottom:25px;
+}
+
+.btn:hover{
+  background-color: #a3fffa;
+  cursor: pointer;
+}
+
+/*  table   */
+
+.deletebtn{
+  background : none;
+  border:none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  padding-right: 0;
+  min-width:500px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, .deletetd{
+  background-color : #00fff7;
+}
+
+.deletetd:hover{
+  background: #a3fffa;
+}
+
+th:nth-child(1), th:nth-child(2) {
+  background: #a3fffa;
+}
+
+td, th{
+  padding: 5px 60px;
+  text-align: center;
+}
+
+.zero{
+  padding:0;
+}
+
+.deletetd{
+  padding:0;
+}
+
+

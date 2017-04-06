@@ -1,0 +1,81 @@
+
+<!-- Logo -->
+
+
+<img src="/images/logo.png">
+
+
+<!-- Browse -->
+
+
+<form action="/upload" enctype="multipart/form-data" method="post">
+    <ul>
+        <li class="wrapper">
+
+            <input class="left" disabled type="text" ><input class="text" type ="text" id="empty" disabled><label class="upload">
+                <input type="file" id="file" name="file" required accept=".zip">
+                Browse
+            </label>
+
+
+        </li>
+
+
+
+        <li > <input class="btn" type="submit" value="Upload"></li>
+    </ul>
+</form>
+
+
+<table>
+    <thead class="">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th class="zero"></th>
+    </tr>
+    </thead>
+    <tbody >
+
+    {{#each data}}
+    <tr>
+        <td>{{this.fileName}}</td>
+        <td>{{this.date}}</td>
+        <td class="deletetd">
+            <form action="/deleteFile/{{this.folderName}}" method="post">
+                <button class="deletebtn" type="submit"><b>X</b></button>
+            </form>
+        </td>
+    </tr>
+
+    {{/each}}
+    </tbody>
+</table>
+
+<!-- table -->
+
+<script>
+
+
+
+
+    var browse = document.querySelector('#file');
+    var text = document.querySelector('.text');
+
+
+
+
+    function sendValue(){
+
+        var newpath = browse.value.replace(/\\/g,"/");
+        var newValue = newpath.substr(newpath.lastIndexOf("/") + 1);
+        text.value = newValue;
+
+    }
+
+    browse.addEventListener('change' , sendValue);
+
+
+
+
+</script>
